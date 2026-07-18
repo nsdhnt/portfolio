@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Archivo+Black&family=Lobster&family=Momo+Trust+Display&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Zen+Kurenaido&family=Zen+Maru+Gothic&family=Zen+Old+Mincho&display=swap" rel="stylesheet">  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Archivo+Black&family=Lobster&family=Momo+Trust+Display&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Zen+Kurenaido&family=Zen+Maru+Gothic&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Archivo+Black&family=Lobster&family=Momo+Trust+Display&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Zen+Kaku+Gothic+Antique&family=Zen+Kurenaido&family=Zen+Maru+Gothic&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css"><link rel="preconnect" href="https://fonts.googleapis.com">
   <script defer src="js/script.js"></script>
   <title>Nishida Hinata's Portfolio</title>
 </head>
@@ -14,14 +18,94 @@
     <nav>
       <h1><a href="index.html">Nishida Hinata</a></h1>
       <ul>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">WORKS</a></li>
-        <li><a href="#">SKILL</a></li>
-        <li><a href="#">CONTACT</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#works">WORKS</a></li>
+        <li><a href="#skill">SKILL</a></li>
+        <li><a href="#contact">CONTACT</a></li>
       </ul>
     </nav>
   </header>
-  <main></main>
-  <footer></footer>
+  <main>
+    <section class="container about" id="about">
+      <h2>ABOUT</h2>
+      <div class="about-content">
+        <div class="my-name">
+          <p>西田響詩</p>
+          <p>Nishida Hinata</p>
+        </div>
+        <div class="profile-detail">
+          <p class="affiliation">ECCコンピュータ専門学校 / Webデザインコース / 2028年卒業予定</p>
+          <p class="job-category">フロントエンドエンジニア志望</p>
+          <h3>コツコツ続ける継続力で、理想を現実にする</h3>
+          <p class="description">
+            毎週の課題や日々の開発を愚直に積み重ねることで、エンジニアとしての「地肩」を強くしています。 
+            培った基礎力と技術の引き出しを活かし、どんなに緻密なデザインや機能でも、妥協せず100％以上のクオリティで形にできるフロントエンドエンジニアを目指しています。
+          </p>
+          <!-- <div class="button-wrap">
+            <button type="button">profile</button>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="container works" id="works">
+      <h2>WORKS</h2>
+      <div class="works-wrap">
+        <div class="works-content">
+          <img src="img/logo-yasasii-jisyu-cafe.png" alt="高校生のためのやさしい自習カフェ">
+        </div>
+      </div>
+      <div class="works-wrap">
+        <div class="works-content cafe">
+          <img src="img/logo-mypick.png" alt="My Pick">
+        </div>
+        <div class="works-content">
+          <img src="img/logo-reptan.png" alt="リプ単">
+        </div>
+      </div>
+    </section>
+
+    <section class="container skill" id="skill">
+      <h2>SKILL</h2>
+      <div class="skill-wrap">
+        <picture>
+          <img src="img/skill-html.png" alt="HTML">
+        </picture>
+        <picture>
+          <img src="img/skill-css.png" alt="CSS">
+        </picture>
+        <picture>
+          <img src="img/skill-js.png" alt="JavaScript">
+        </picture>
+        <picture>
+          <img src="img/skill-react.png" alt="React">
+        </picture>
+      </div>
+    </section>
+
+    <section class="container contact" id="contact">
+      <h2>CONTACT</h2>
+      <div class="mail">
+        <a href="mailto:hinata.nishida12@gmail.com">
+          hinata.nishida12@gmail.com
+        </a>
+      </div>
+      <div class="links">
+        <div class="github">
+          <a href="https://github.com/nsdhnt">
+            <img src="img/GitHub_Invertocat_White 1.png" alt="">
+          </a>
+        </div>
+        <div class="x">
+          <a href="https://x.com/nsdhnt12">
+            <img src="img/logo-x-white.png" alt="">
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <small>©2026 Nishida Hinata's Portfolio</small>
+  </footer>
 </body>
 </html>

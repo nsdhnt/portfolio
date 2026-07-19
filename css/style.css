@@ -1,5 +1,6 @@
 html{
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 *{
@@ -11,6 +12,7 @@ html{
 body{
   background-color: #FFF1D8;
   height: fit-content;
+  /* overflow-x: hidden; */
   header{
     width: 100%;
     height: 80px;
@@ -71,13 +73,13 @@ body{
       width: 1118px;
       height: fit-content;
       padding: 36px;
-      transform: translateX(-18px);
+      margin-left: -18px;
       background-color: #fff;
       border: solid 8px #002262;
       border-radius: 0 50px 50px 0;
       box-shadow: 18px 18px 0 #000;
       color: #002262;
-      font-family: "Zen Kaku Gothic Antique", sans-serif;
+      font-family: "Zen Kaku Gothic New", sans-serif;
       h2{
         margin-bottom: 36px;
         border-bottom: solid 5px #002262;
@@ -184,9 +186,22 @@ body{
           justify-content: center;
           align-items: center;
           position: relative;
+          cursor: pointer;
+          transition: 0.3s;
+          &:hover{
+            /* transform: scale(1.1); */
+            box-shadow: 0 0;
+            transform: translate(6px, 6px);
+            filter: brightness(1.1);
+          }
           img{
             width: 60%;
             transform: translateY(-10%);
+            transition: 0.3s;
+            /* &:hover{
+              transform: translateY(-20%);
+              transform: scale(1.2);
+            } */
           }
           &.cafe{
             img{
@@ -196,7 +211,7 @@ body{
           &::after{
             content: "check!";
             color: #fff;
-            font-family: "Zen Kaku Gothic Antique", sans-serif;
+            font-family: "Zen Kaku Gothic New", sans-serif;
             font-size: 2rem;
             text-align: center;
             line-height: 50px;
@@ -210,6 +225,97 @@ body{
           }
         }
       }
+
+      .overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        width: 100vw;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.hidden{
+          display: none;
+        }
+        .window-card{
+          padding: 30px;
+          width: fit-content;
+          height: fit-content;
+          background-color: #fff;
+          border-radius: 20px;
+          .work-content{
+            width: 100%;
+            height: 100%;
+            .work-top{
+              width: 515px;
+              display: flex;
+              justify-content: space-between;
+              picture{
+                img{
+                  width: 263px;
+                  height: 148px;
+                }
+              }
+              .work-info{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                font-weight: bold;
+                .title{
+                  font-size: 1.6rem;
+                  color: #000;
+                }
+                .form{
+                  span{
+                    font-size: 1.2rem;
+                    color: #002262;
+                    padding: 6px 10px;
+                    border: solid 1px #002262;
+                    border-radius: 6px;
+                    margin-right: 15px;
+                  }
+                }
+                button{
+                  display: block;
+                  width: fit-content;
+                  height: fit-content;
+                  border: none;
+                  a{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    padding: 10px 68px;
+                    font-size: 1.6rem;
+                    color: #fff;
+                    background-color: #002262;
+                    border-radius: 8px;
+                    text-decoration: none;
+                  }
+                }
+              }
+            }
+
+            .work-description{
+              width: 515px;
+              h3{
+                font-size: 1.6rem;
+                font-weight: bold;
+                color: #002262;
+                padding: 2px 8px;
+                border-bottom: solid 2px #002262;
+              }
+              p{
+                font-size: 1.2rem;
+                padding: 10px 8px;
+              }
+            }
+          }
+        }
+      }
     }
 
     .skill{
@@ -220,7 +326,7 @@ body{
       border: solid 8px #002262;
       border-radius: 50px;
       box-shadow: 18px 18px 0 #000;
-      transform: translateX(-67px);
+      margin-left: -67px;
       h2{
         color: #002262;
         border-bottom: solid 5px #002262;
@@ -253,13 +359,13 @@ body{
     }
 
     .contact{
-      width: 1415px;
+      width: 1215px;
       height: fit-content;
-      border-radius: 50px;
+      border-radius: 50px 0 0 50px;
       padding: 50px 160px 50px 60px;
       background-color: #002262;
       box-shadow: 18px 18px 0 #000;
-      transform: translateX(200px);
+      margin-left: auto;
       h2{
         color: #fff;
         border-bottom: solid 5px #fff;

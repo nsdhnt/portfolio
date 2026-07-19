@@ -42,6 +42,7 @@ body{
         gap: 40px;
         li{
           list-style: none;
+          /* border: solid 1px black; */
           a{
             display: block;
             text-decoration: none;
@@ -49,6 +50,25 @@ body{
             font-family: "Afacad Flux", sans-serif;
             font-size: 2.4rem;
             font-weight: bold;
+            position: relative;
+            /* border: solid 1px tomato; */
+            &::after{
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: -2px;
+              border: solid 1px #002262;
+              width: 100%;
+              transform: scaleX(0);
+              transform-origin: left;
+              transition: 0.3s;
+            }
+            &:hover{
+              &::after{
+                /* width: 100%; */
+                transform: scaleX(100%);
+              }
+            }
           }
         }
       }
@@ -375,9 +395,10 @@ body{
         a{
           display: block;
           padding: 4px;
+          height: 45px;
           color: #fff;
           font-size: 2.4rem;
-          font-family: "Zen Kaku Gothic Antique", sans-serif;
+          font-family: "Zen Kaku Gothic New", sans-serif;
         }
       }
       .links{
@@ -404,7 +425,7 @@ body{
     align-items: center;
     small{
       font-size: 2rem;
-      font-family: "Zen Kaku Gothic Antique", sans-serif;
+      font-family: "Zen Kaku Gothic New", sans-serif;
       color: #fff;
     }
   }
